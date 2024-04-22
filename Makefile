@@ -31,13 +31,13 @@ ARCH ?= x86_64
 PLATFORM ?=
 SMP ?= 1
 MODE ?= release
-LOG ?= warn
+LOG ?= info
 V ?=
 
 # App options
 A ?= apps/helloworld
 APP ?= $(A)
-FEATURES ?=
+FEATURES ?=	alloc paging multitask
 APP_FEATURES ?=
 
 # QEMU options
