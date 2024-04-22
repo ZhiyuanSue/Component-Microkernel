@@ -1,8 +1,44 @@
 [workspace]
 resolver = "2"
+
 members = [
-	"arch"
+    "crates/allocator",
+    "crates/axerrno",
+    "crates/axio",
+    "crates/crate_interface",
+    "crates/flatten_objects",
+    "crates/handler_table",
+    "crates/kernel_guard",
+    "crates/lazy_init",
+    "crates/linked_list",
+    "crates/memory_addr",
+    "crates/page_table",
+    "crates/page_table_entry",
+    "crates/percpu",
+    "crates/percpu_macros",
+    "crates/ratio",
+    "crates/scheduler",
+    "crates/slab_allocator",
+    "crates/spinlock",
+    "crates/tuple_for_each",
+
+    "modules/axalloc",
+    "modules/axconfig",
+    "modules/axhal",
+    "modules/axlog",
+    "modules/axruntime",
+    "modules/axsync",
+    "modules/axtask",
+
+    "api/arceos_api",
+
+    "ulib/axstd",
+
+    "apps/helloworld",
 ]
 
 [profile.release]
 lto = true
+
+[patch.crates-io]
+crate_interface = { path = "crates/crate_interface" }
